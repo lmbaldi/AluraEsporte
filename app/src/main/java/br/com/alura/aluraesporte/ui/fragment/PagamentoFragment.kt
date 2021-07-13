@@ -1,5 +1,6 @@
 package br.com.alura.aluraesporte.ui.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -49,6 +50,7 @@ class PagamentoFragment : Fragment() {
         buscaProduto()
     }
 
+    @SuppressLint("FragmentLiveDataObserve")
     private fun buscaProduto() {
         viewModel.buscaProdutoPorId(produtoId).observe(this, Observer {
             it?.let { produtoEncontrado ->
@@ -82,7 +84,7 @@ class PagamentoFragment : Fragment() {
     }
 
     private fun vaiParaListaProdutos() {
-        controlador.popBackStack(R.id.listaProdutos, false)
+        controlador.navigate(R.id.action_pagamento_to_listaProdutos)
     }
 
     private fun criaPagamento(): Pagamento? {
