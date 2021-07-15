@@ -13,7 +13,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class LoginFragment : Fragment() {
 
-    private  val controlador by lazy {
+    private val controlador by lazy {
         findNavController()
     }
 
@@ -29,12 +29,7 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        if(viewModel.estaLogado()){
-            vaiParaListaProdutos()
-        }
-
-        login_botao_logar.setOnClickListener{
+        login_botao_logar.setOnClickListener {
             viewModel.logar()
             vaiParaListaProdutos()
         }

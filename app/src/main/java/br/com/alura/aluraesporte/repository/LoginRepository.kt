@@ -7,17 +7,15 @@ private const val CHAVE_LOGADO = "LOGADO"
 
 class LoginRepository(private val preferences: SharedPreferences) {
 
-    fun logar(){
-        preferences.edit {
-            putBoolean("LOGADO", true)
-        }
-    }
+    fun logar() =   salvar(true)
 
     fun estaLogado(): Boolean = preferences.getBoolean(CHAVE_LOGADO, false)
 
-    fun deslogar() {
+    fun deslogar() =  salvar(false)
+
+    private fun salvar(estado: Boolean) {
         preferences.edit {
-            putBoolean("LOGADO", false)
+            putBoolean("LOGADO", estado)
         }
     }
 
