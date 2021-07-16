@@ -34,10 +34,6 @@ class ListaProdutosFragment : BaseFragment() {
         })
     }
 
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        super.onCreateOptionsMenu(menu, inflater)
-//        inflater?.inflate(R.menu.menu_principal, menu)
-//    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
