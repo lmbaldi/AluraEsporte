@@ -9,7 +9,7 @@ import androidx.navigation.fragment.findNavController
 import br.com.alura.aluraesporte.R
 import kotlinx.android.synthetic.main.cadastro_usuario.*
 
-class CadastroUsuárioFragment :  Fragment() {
+class CadastroUsuarioFragment :  Fragment() {
 
     private val controlador by lazy {
        findNavController()

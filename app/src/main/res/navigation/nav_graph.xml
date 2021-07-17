@@ -86,7 +86,7 @@
         app:popUpToInclusive="true" />
     <fragment
         android:id="@+id/cadastroUsuario"
-        android:name="br.com.alura.aluraesporte.ui.fragment.CadastroUsuárioFragment"
+        android:name="br.com.alura.aluraesporte.ui.fragment.CadastroUsuarioFragment"
         android:label="Cadastro de Usuário"
         tools:layout="@layout/cadastro_usuario"/>
 
