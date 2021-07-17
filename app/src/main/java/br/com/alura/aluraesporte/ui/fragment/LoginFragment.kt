@@ -33,6 +33,10 @@ class LoginFragment : Fragment() {
             viewModel.logar()
             vaiParaListaProdutos()
         }
+        login_botao_cadastrar_usuario.setOnClickListener{
+            val direcao = LoginFragmentDirections.actionLoginToCadastroUsuario()
+            controlador.navigate(direcao)
+        }
     }
 
     private fun vaiParaListaProdutos() {
