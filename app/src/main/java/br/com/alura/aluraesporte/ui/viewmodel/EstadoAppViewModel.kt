@@ -11,6 +11,7 @@ class EstadoAppViewModel : ViewModel() {
     }
 
     var temAppBar: Boolean = false
+        get() = field
         set(value) {
             field = value
             _appBar.value = value
